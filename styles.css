@@ -255,23 +255,3 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); color: var(--navy); line
   .page-header { padding: 2.25rem 1rem 2rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
-
-/* ── WhatsApp floating button ─────────────────────────── */
-.wa-btn {
-  position: fixed;
-  bottom: 1.6rem;
-  right: 1.6rem;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25D366;
-  box-shadow: 0 4px 14px rgba(0,0,0,.35);
-  text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
-}
-.wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,.45); }
-.wa-btn svg  { width: 32px; height: 32px; fill: #fff; }
