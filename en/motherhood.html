@@ -6,7 +6,7 @@
 <title>MOTHERHOOD – María Cecilia Perrín de Buide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body id="top">
@@ -58,6 +58,14 @@
 <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">&#8593;</a>
 <script>
 document.querySelector('.nav-toggle').addEventListener('click',function(){var o=document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);});
+</script>
+<script>
+(function(){var h=document.querySelector('.site-header'),b=document.querySelector('.back-to-top');
+function s(){var y=window.scrollY>40;h.classList.toggle('scrolled',y);if(b)b.classList.toggle('visible',window.scrollY>500);}
+window.addEventListener('scroll',s,{passive:true});s();
+document.querySelectorAll('.site-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');});});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+document.querySelectorAll('.card,.stage,.testimonial,.section-head,.prose,.widget').forEach(function(el){el.classList.add('reveal');io.observe(el);});}})();
 </script>
 </body>
 </html>
